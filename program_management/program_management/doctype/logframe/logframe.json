@@ -1,0 +1,135 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2020-07-18 21:00:26.799010",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "type",
+  "subject",
+  "column_break_4",
+  "project_proposal",
+  "lft",
+  "rgt",
+  "is_group",
+  "old_parent",
+  "outcome_and_output",
+  "activity",
+  "indicator",
+  "parent_logical_framework_chart"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "LF-.YYYY.-.#####"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Objective\nOutcome\nOutput\nIndicator\nActivity"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Subject",
+   "length": 300,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "project_proposal",
+   "fieldtype": "Link",
+   "label": "Project Proposal",
+   "options": "Project Proposal"
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Old Parent",
+   "options": "Logframe"
+  },
+  {
+   "fieldname": "parent_logical_framework_chart",
+   "fieldtype": "Link",
+   "label": "Parent Logical Framework Chart",
+   "options": "Logframe"
+  },
+  {
+   "depends_on": "eval:in_list([\"Objective\", \"Outcome\", \"Output\"], doc.type)",
+   "fieldname": "outcome_and_output",
+   "fieldtype": "Link",
+   "label": "Outcome and Output",
+   "options": "Outcome and Output"
+  },
+  {
+   "depends_on": "eval:doc.type==\"Activity\"",
+   "fieldname": "activity",
+   "fieldtype": "Link",
+   "label": "Activity",
+   "options": "Activity"
+  },
+  {
+   "depends_on": "eval:doc.type==\"Indicator\"",
+   "fieldname": "indicator",
+   "fieldtype": "Link",
+   "label": "Indicator",
+   "options": "Indicators"
+  }
+ ],
+ "is_tree": 1,
+ "modified": "2021-03-15 23:45:17.551059",
+ "modified_by": "o.mutawakel@partner-cons.com",
+ "module": "Program Management",
+ "name": "Logframe",
+ "nsm_parent_field": "parent_logical_framework_chart",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

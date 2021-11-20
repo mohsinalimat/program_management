@@ -1,0 +1,307 @@
+{
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2020-08-12 18:55:42.545316",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "field_visit_plan_title",
+  "visit_report",
+  "column_break_2",
+  "naming_series",
+  "section_break_9",
+  "project",
+  "project_name",
+  "fund_project_code",
+  "donor",
+  "project_location",
+  "column_breack_6",
+  "expected_start_date",
+  "expected_end_date",
+  "project_manager",
+  "project_manager_name",
+  "project_manager_email",
+  "before_visit_section",
+  "recommendations_of_the_previous_visit",
+  "section_break_5",
+  "type_of_visit__assignment",
+  "column_break_7",
+  "date_of_preparing_the_plan",
+  "column_break_9",
+  "date_of_visit_according_to_plan",
+  "section_break_11",
+  "field_visit_plan_details",
+  "section_break_13",
+  "general_goal",
+  "sub_goals",
+  "methods_of_goals",
+  "section_break_24",
+  "attachments",
+  "section_break_31",
+  "field_visit_team",
+  "section_break_35",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "FVP-MEAL-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "project.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.fund_code",
+   "fieldname": "fund_project_code",
+   "fieldtype": "Data",
+   "label": "Fund Project Code",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.donor",
+   "fieldname": "donor",
+   "fieldtype": "Data",
+   "label": "Donor",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_breack_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "project.project_manager",
+   "fieldname": "project_manager",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Project Manager",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.project_location",
+   "fieldname": "project_location",
+   "fieldtype": "Data",
+   "label": "Project Location",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.expected_start_date",
+   "fieldname": "expected_start_date",
+   "fieldtype": "Data",
+   "label": "Expected Start Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.expected_end_date",
+   "fieldname": "expected_end_date",
+   "fieldtype": "Data",
+   "label": "Expected End Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "before_visit_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "recommendations_of_the_previous_visit",
+   "fieldtype": "Table",
+   "label": "Recommendations of the Previous Visit",
+   "options": "Recommendations of the Previous Visit"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "type_of_visit__assignment",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Type of Visit / Assignment",
+   "options": "\nFollow-up & Supervision Visit - (Technical or Support)\nFollow-up and evaluation visit\nOther visits",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_preparing_the_plan",
+   "fieldtype": "Date",
+   "label": "Date of Preparing the Plan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "field_visit_plan_details",
+   "fieldtype": "Table",
+   "label": "Field Visit Plan Details",
+   "options": "Field Visit Plan Table"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "general_goal",
+   "fieldtype": "Long Text",
+   "label": "General Goal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sub_goals",
+   "fieldtype": "Table",
+   "label": "Sub Goals",
+   "options": "Sub Goals"
+  },
+  {
+   "fieldname": "field_visit_team",
+   "fieldtype": "Table",
+   "ignore_user_permissions": 1,
+   "label": "Field Visit Team",
+   "options": "Field Visit Team",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Field Visit Plan",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "field_visit_plan_title",
+   "fieldtype": "Data",
+   "label": "Field Visit Plan Title",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "visit_report",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Visit Report"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_of_visit_according_to_plan",
+   "fieldtype": "Date",
+   "label": "Date of Visit According to Plan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "methods_of_goals",
+   "fieldtype": "Table",
+   "label": "Methods of Goals",
+   "options": "Methods of Goals"
+  },
+  {
+   "fieldname": "section_break_31",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_35",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Table",
+   "label": "Attachments",
+   "options": "Attachments"
+  },
+  {
+   "fetch_from": "project_manager.user_id",
+   "fieldname": "project_manager_email",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Project Manager Email",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project_manager.employee_name",
+   "fieldname": "project_manager_name",
+   "fieldtype": "Data",
+   "label": "Project Manager Name",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-03-17 03:40:22.568536",
+ "modified_by": "Administrator",
+ "module": "MEAL",
+ "name": "Field Visit Plan",
+ "owner": "t.azzan@partner-cons.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "field_visit_plan_title",
+ "track_changes": 1
+}

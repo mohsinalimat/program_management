@@ -1,0 +1,109 @@
+{
+ "creation": "2020-11-10 11:11:47.293541",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "add_governorate",
+  "governorates",
+  "column_break_5",
+  "add_district",
+  "section_break_4",
+  "districts",
+  "date",
+  "type_of_activity",
+  "section_break_11",
+  "comments",
+  "governorate",
+  "district"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "governorate",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Governorate",
+   "options": "Territory"
+  },
+  {
+   "columns": 2,
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "District",
+   "options": "Territory"
+  },
+  {
+   "columns": 2,
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "columns": 2,
+   "description": "(Training, Coordinator, Rehabilitation)",
+   "fieldname": "type_of_activity",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Type of Activity"
+  },
+  {
+   "columns": 2,
+   "fieldname": "comments",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Comments"
+  },
+  {
+   "fieldname": "add_governorate",
+   "fieldtype": "Button",
+   "label": "Add Governorate"
+  },
+  {
+   "columns": 2,
+   "fieldname": "governorates",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Governorates",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "add_district",
+   "fieldtype": "Button",
+   "label": "Add District"
+  },
+  {
+   "columns": 2,
+   "fieldname": "districts",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Districts",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-12-31 23:16:28.015946",
+ "modified_by": "Administrator",
+ "module": "Program Management",
+ "name": "Activities Priorities for Next Month",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

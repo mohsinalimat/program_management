@@ -1,0 +1,143 @@
+{
+ "creation": "2021-02-07 20:05:54.382675",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "indicator",
+  "indicator_subject",
+  "target",
+  "achieved_of_this_month",
+  "column_break_4",
+  "is_percentage",
+  "remaining",
+  "in_progress",
+  "section_break_8",
+  "comment",
+  "column_break_11",
+  "mean_of_verification",
+  "attachment",
+  "add_more_then_one_attach",
+  "attachment_1",
+  "attachment_2",
+  "attachment_3"
+ ],
+ "fields": [
+  {
+   "fieldname": "indicator",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Indicator",
+   "options": "Indicator Log",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "indicator.indicator_subject",
+   "fieldname": "indicator_subject",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Indicator Subject",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "indicator.total",
+   "fieldname": "target",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Target",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "fetch_from": "indicator.total_achieved",
+   "fieldname": "achieved_of_this_month",
+   "fieldtype": "Int",
+   "label": "Achieved of This Month"
+  },
+  {
+   "default": "0",
+   "fetch_from": "indicator.is_percentage",
+   "fieldname": "is_percentage",
+   "fieldtype": "Check",
+   "label": "Is Percentage",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "indicator.remaining",
+   "fieldname": "remaining",
+   "fieldtype": "Data",
+   "label": "Remaining",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "indicator.in_progress",
+   "fieldname": "in_progress",
+   "fieldtype": "Percent",
+   "label": "In Progress",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "indicator.means_of_verification",
+   "fieldname": "mean_of_verification",
+   "fieldtype": "Data",
+   "label": "Mean of Verification",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "default": "0",
+   "fieldname": "add_more_then_one_attach",
+   "fieldtype": "Check",
+   "label": "Add More then one Attach"
+  },
+  {
+   "depends_on": "add_more_then_one_attach",
+   "fieldname": "attachment_1",
+   "fieldtype": "Attach",
+   "label": "Attachment 1"
+  },
+  {
+   "depends_on": "add_more_then_one_attach",
+   "fieldname": "attachment_2",
+   "fieldtype": "Attach",
+   "label": "Attachment 2"
+  },
+  {
+   "depends_on": "add_more_then_one_attach",
+   "fieldname": "attachment_3",
+   "fieldtype": "Attach",
+   "label": "Attachment 3"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-05-03 14:35:57.418744",
+ "modified_by": "Administrator",
+ "module": "Program Management",
+ "name": "Indicator Progress Tracking",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

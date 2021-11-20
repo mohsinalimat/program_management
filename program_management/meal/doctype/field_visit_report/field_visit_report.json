@@ -1,0 +1,345 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2020-10-12 00:18:41.691333",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "field_visit_report_title",
+  "column_break_2",
+  "naming_series",
+  "field_visit_plan",
+  "section_break_9",
+  "project",
+  "project_name",
+  "fund_project_code",
+  "donor",
+  "project_location",
+  "column_breack_6",
+  "expected_start_date",
+  "expected_end_date",
+  "project_manager",
+  "project_manager_name",
+  "project_manager_email",
+  "before_visit_section",
+  "date_of_preparing_the_plan",
+  "column_break_17",
+  "date_of_visit_according_to_plan",
+  "column_break_24",
+  "actual_date_of_the_visit",
+  "section_break_47",
+  "visit_report_details",
+  "section_break_24",
+  "general_goal",
+  "achieved_goals_section",
+  "goals_achieved_during_the_visit",
+  "column_break_26",
+  "goals_not_achieved_during_the_visit",
+  "section_break_30",
+  "positive_notes",
+  "html_33",
+  "negative_notes",
+  "html_35",
+  "current_visit_recommendations",
+  "section_break_35",
+  "suggested_solutions_to_improve_performance_section",
+  "suggested_solutions_for_field_visit",
+  "attachments_details_section",
+  "attachments",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "field_visit_report_title",
+   "fieldtype": "Data",
+   "label": "Field Visit Report Title",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "FVR-MEAL-.YYYY.-"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "project.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.fund_project_code",
+   "fieldname": "fund_project_code",
+   "fieldtype": "Data",
+   "label": "Fund Project Code",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.donor",
+   "fieldname": "donor",
+   "fieldtype": "Data",
+   "label": "Donor",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_breack_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "field_visit_plan.project_manager",
+   "fieldname": "project_manager",
+   "fieldtype": "Link",
+   "label": "Project Manager",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.project_location",
+   "fieldname": "project_location",
+   "fieldtype": "Data",
+   "label": "Project Location",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.expected_start_date",
+   "fieldname": "expected_start_date",
+   "fieldtype": "Data",
+   "label": "Expected Start Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.expected_end_date",
+   "fieldname": "expected_end_date",
+   "fieldtype": "Data",
+   "label": "Expected End Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "before_visit_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_of_visit_according_to_plan",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of Visit According to Plan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "actual_date_of_the_visit",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Actual Date of the Visit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break",
+   "label": "Planed Goals"
+  },
+  {
+   "fieldname": "goals_achieved_during_the_visit",
+   "fieldtype": "Table",
+   "label": "Goals Achieved During the Visit",
+   "options": "Goals Achieved During the Visit"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "goals_not_achieved_during_the_visit",
+   "fieldtype": "Table",
+   "label": "Goals not Achieved During the Visit",
+   "options": "Goals not Achieved During the Visit"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_30",
+   "fieldtype": "Section Break",
+   "label": "Notes and Recommendations"
+  },
+  {
+   "fieldname": "negative_notes",
+   "fieldtype": "Table",
+   "label": "Negative Notes",
+   "options": "Negative Notes"
+  },
+  {
+   "fieldname": "current_visit_recommendations",
+   "fieldtype": "Table",
+   "label": "Current Visit Recommendations",
+   "options": "Current Visit Recommendations"
+  },
+  {
+   "fieldname": "section_break_47",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "visit_report_details",
+   "fieldtype": "Table",
+   "label": "Visit Report Details",
+   "options": "Field Visit Report Table"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "suggested_solutions_to_improve_performance_section",
+   "fieldtype": "Section Break",
+   "label": "Suggested Solutions to Improve Performance"
+  },
+  {
+   "fieldname": "suggested_solutions_for_field_visit",
+   "fieldtype": "Table",
+   "label": "Suggested Solutions for Field Visit",
+   "options": "Suggested Solutions for Field Visit"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "attachments_details_section",
+   "fieldtype": "Section Break",
+   "label": "Attachments Details"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Table",
+   "label": "Attachments",
+   "options": "Attachments"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Field Visit Report",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "field_visit_plan",
+   "fieldtype": "Link",
+   "label": "Field Visit Plan",
+   "options": "Field Visit Plan"
+  },
+  {
+   "fetch_from": "field_visit_plan.date_of_preparing_the_plan",
+   "fieldname": "date_of_preparing_the_plan",
+   "fieldtype": "Data",
+   "label": "Date of Preparing the Plan",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "field_visit_plan.general_goal",
+   "fieldname": "general_goal",
+   "fieldtype": "Long Text",
+   "label": "General Goal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "achieved_goals_section",
+   "fieldtype": "Section Break",
+   "label": "Achieved Goals"
+  },
+  {
+   "fieldname": "positive_notes",
+   "fieldtype": "Table",
+   "label": "Positive Notes",
+   "options": "Positive Notes"
+  },
+  {
+   "fetch_from": "field_visit_plan.project",
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Project",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "field_visit_plan.project_manager_name",
+   "fieldname": "project_manager_name",
+   "fieldtype": "Data",
+   "label": "Project Manager Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "field_visit_plan.project_manager_email",
+   "fieldname": "project_manager_email",
+   "fieldtype": "Link",
+   "label": "Project Manager Email",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_35",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "html_33",
+   "fieldtype": "HTML",
+   "options": "<div class=\"page-break\"></div>"
+  },
+  {
+   "fieldname": "html_35",
+   "fieldtype": "HTML",
+   "options": "<div class=\"page-break\"></div>"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-12-14 10:46:25.814332",
+ "modified_by": "Administrator",
+ "module": "MEAL",
+ "name": "Field Visit Report",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "field_visit_report_title",
+ "track_changes": 1
+}

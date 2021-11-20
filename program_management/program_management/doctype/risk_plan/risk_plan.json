@@ -1,0 +1,219 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2020-07-20 00:53:32.705580",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "project",
+  "project_name",
+  "fund_project_code",
+  "column_break_5",
+  "project_proposal",
+  "donor",
+  "project_manager",
+  "expected_start_date",
+  "expected_end_date",
+  "risk_plan_details_section",
+  "risk_title",
+  "total_risk_scores",
+  "section_break_14",
+  "priority_rating",
+  "responsible",
+  "responsible_nama",
+  "responsible_email",
+  "column_break_16",
+  "preventative_actions",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "RP-.YYYY.-"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "project.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.fund_code",
+   "fieldname": "fund_project_code",
+   "fieldtype": "Data",
+   "label": "Fund Project Code",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.donor",
+   "fieldname": "donor",
+   "fieldtype": "Data",
+   "label": "Donor",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "project.project_manager",
+   "fieldname": "project_manager",
+   "fieldtype": "Data",
+   "label": "Project Manager",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.expected_start_date",
+   "fieldname": "expected_start_date",
+   "fieldtype": "Data",
+   "label": "Expected Start Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.expected_end_date",
+   "fieldname": "expected_end_date",
+   "fieldtype": "Data",
+   "label": "Expected End Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "risk_plan_details_section",
+   "fieldtype": "Section Break",
+   "label": "Risk Plan Details"
+  },
+  {
+   "fieldname": "total_risk_scores",
+   "fieldtype": "Table",
+   "label": "Total Risk Scores",
+   "options": "Total Risk Scores"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "priority_rating",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Priority Rating",
+   "options": "\nVery Low\nLow\nMedium\nHigh\nVery High",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "preventative_actions",
+   "fieldtype": "Small Text",
+   "label": "Preventative Actions"
+  },
+  {
+   "fieldname": "responsible",
+   "fieldtype": "Link",
+   "label": "Responsible ",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Risk Plan",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project.project_proposal",
+   "fieldname": "project_proposal",
+   "fieldtype": "Link",
+   "label": "Project Proposal",
+   "options": "Project Proposal",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "responsible.employee_name",
+   "fieldname": "responsible_nama",
+   "fieldtype": "Data",
+   "label": "Responsible Nama",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "responsible.user_id",
+   "fieldname": "responsible_email",
+   "fieldtype": "Link",
+   "label": "Responsible Email",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "risk_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Risk Title",
+   "reqd": 1,
+   "unique": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-04-05 21:24:39.005583",
+ "modified_by": "Administrator",
+ "module": "Program Management",
+ "name": "Risk Plan",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "risk_title",
+ "track_changes": 1
+}

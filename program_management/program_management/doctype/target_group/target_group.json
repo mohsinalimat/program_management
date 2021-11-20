@@ -1,0 +1,161 @@
+{
+ "creation": "2021-02-07 19:04:46.634929",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "governorate",
+  "column_break_2",
+  "district",
+  "column_break_4",
+  "category",
+  "column_break_6",
+  "type",
+  "column_break_8",
+  "age_group",
+  "section_break_10",
+  "men",
+  "column_break_12",
+  "women",
+  "column_break_14",
+  "boys",
+  "column_break_16",
+  "girls",
+  "column_break_18",
+  "unclassified",
+  "column_break_20",
+  "total"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "unclassified",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Unclassified"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "total",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "governorate",
+   "fieldtype": "Link",
+   "label": "Governorate",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Beneficiaries Category"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "Beneficiaries Type"
+  },
+  {
+   "fieldname": "age_group",
+   "fieldtype": "Link",
+   "label": "Age Group",
+   "options": "Age Group"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "default": "0",
+   "fieldname": "men",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Total Men"
+  },
+  {
+   "columns": 2,
+   "default": "0",
+   "fieldname": "women",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Total Women"
+  },
+  {
+   "columns": 2,
+   "default": "0",
+   "fieldname": "boys",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Total Boys"
+  },
+  {
+   "columns": 2,
+   "default": "0",
+   "fieldname": "girls",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Total Girls"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-05-05 21:35:27.834749",
+ "modified_by": "Administrator",
+ "module": "Program Management",
+ "name": "Target Group",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

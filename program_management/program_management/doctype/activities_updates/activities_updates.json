@@ -1,0 +1,130 @@
+{
+ "creation": "2020-11-10 10:40:28.185624",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "type_of_activity",
+  "column_break_3",
+  "no_of_beneficiaries",
+  "date",
+  "section_break_5",
+  "add_governorate",
+  "governorates",
+  "column_break_8",
+  "add_district",
+  "districts",
+  "section_break_9",
+  "brief_description_of_the_activity",
+  "column_break_13",
+  "notes",
+  "governorate",
+  "district"
+ ],
+ "fields": [
+  {
+   "fieldname": "governorate",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Governorate",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "District",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "columns": 2,
+   "description": "(Training, Coordinator, Rehabilitation, .....)",
+   "fieldname": "type_of_activity",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Type of Activity"
+  },
+  {
+   "columns": 1,
+   "fieldname": "no_of_beneficiaries",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No. of Beneficiaries"
+  },
+  {
+   "columns": 2,
+   "fieldname": "brief_description_of_the_activity",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Brief Description of the Activity"
+  },
+  {
+   "columns": 2,
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Notes"
+  },
+  {
+   "fieldname": "add_governorate",
+   "fieldtype": "Button",
+   "label": "Add Governorate"
+  },
+  {
+   "fieldname": "add_district",
+   "fieldtype": "Button",
+   "label": "Add District"
+  },
+  {
+   "fieldname": "districts",
+   "fieldtype": "Small Text",
+   "label": "Districts",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "governorates",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Governorates",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-12-31 23:06:57.029486",
+ "modified_by": "Administrator",
+ "module": "Program Management",
+ "name": "Activities Updates",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

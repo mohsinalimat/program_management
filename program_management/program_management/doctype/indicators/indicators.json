@@ -1,0 +1,226 @@
+{
+ "allow_rename": 1,
+ "autoname": "format:{code} Indicator-{output}",
+ "creation": "2020-07-20 00:47:35.911028",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "code",
+  "indicator",
+  "column_break_3",
+  "project_proposal",
+  "linked_with",
+  "output",
+  "activity",
+  "section_break_5",
+  "is_percentage",
+  "indicator_detail",
+  "section_break_10",
+  "total_men",
+  "column_break_12",
+  "total_women",
+  "column_break_14",
+  "total_boys",
+  "column_break_16",
+  "total_girls",
+  "column_break_18",
+  "total_unclassified",
+  "column_break_20",
+  "total",
+  "section_break_24",
+  "mean_of_verification"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "IND-.YYYY.-.#####"
+  },
+  {
+   "fieldname": "indicator",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Indicator",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.linked_with!=\"Activity\"",
+   "fieldname": "output",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Objective/Outcome/Output",
+   "options": "Outcome and Output",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "indicator_detail",
+   "fieldtype": "Table",
+   "label": "Indicator Detail",
+   "options": "Indicator Detail"
+  },
+  {
+   "fieldname": "project_proposal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Project Proposal",
+   "options": "Project Proposal",
+   "reqd": 1
+  },
+  {
+   "fieldname": "linked_with",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Linked With",
+   "options": "Objective\nOutcome\nOutput\nActivity"
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_men",
+   "fieldtype": "Int",
+   "label": "Total Men",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_women",
+   "fieldtype": "Int",
+   "label": "Total Women",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_boys",
+   "fieldtype": "Int",
+   "label": "Total Boys",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_girls",
+   "fieldtype": "Int",
+   "label": "Total Girls",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_unclassified",
+   "fieldtype": "Int",
+   "label": "Total Unclassified",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Int",
+   "label": "Total",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.linked_with==\"Activity\"",
+   "fieldname": "activity",
+   "fieldtype": "Link",
+   "label": "Activity",
+   "options": "Activity"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_percentage",
+   "fieldtype": "Check",
+   "label": "Is Percentage"
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "mean_of_verification",
+   "fieldtype": "Data",
+   "label": "Mean of Verification"
+  }
+ ],
+ "modified": "2021-05-03 13:56:44.321886",
+ "modified_by": "Administrator",
+ "module": "Program Management",
+ "name": "Indicators",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
